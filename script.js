@@ -42,19 +42,20 @@ function resizeCanvas() {
   canvas.style.width = `${width}px`;
   canvas.style.height = `${height}px`;
   ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-  particles = Array.from({ length: Math.min(76, Math.floor(width / 15)) }, () => ({
+  particles = Array.from({ length: Math.min(96, Math.floor(width / 12)) }, () => ({
     x: Math.random() * width,
     y: Math.random() * height,
-    vx: (Math.random() - 0.5) * 0.42,
-    vy: (Math.random() - 0.5) * 0.42,
-    r: Math.random() * 1.9 + 0.7
+    vx: (Math.random() - 0.5) * 0.46,
+    vy: (Math.random() - 0.5) * 0.46,
+    r: Math.random() * 2.1 + 0.85
   }));
 }
 
 function drawAmbient() {
   ctx.clearRect(0, 0, width, height);
-  const dot = activeTheme === "light" ? "rgba(12, 18, 28, 0.24)" : "rgba(255, 255, 255, 0.28)";
-  const line = activeTheme === "light" ? "rgba(46, 230, 166, 0.18)" : "rgba(46, 230, 166, 0.22)";
+  const darkMode = document.body.classList.contains("light");
+  const dot = darkMode ? "rgba(255, 255, 255, 0.34)" : "rgba(0, 92, 82, 0.3)";
+  const line = darkMode ? "rgba(51, 224, 166, 0.24)" : "rgba(0, 168, 120, 0.26)";
 
   particles.forEach((p, index) => {
     p.x += p.vx;
@@ -73,13 +74,13 @@ function drawAmbient() {
     for (let j = index + 1; j < particles.length; j += 1) {
       const next = particles[j];
       const dist = Math.hypot(p.x - next.x, p.y - next.y);
-      if (dist < 120) {
-        ctx.globalAlpha = 1 - dist / 120;
+      if (dist < 135) {
+        ctx.globalAlpha = 1 - dist / 135;
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(next.x, next.y);
         ctx.strokeStyle = line;
-        ctx.lineWidth = 1;
+        ctx.lineWidth = darkMode ? 1 : 1.15;
         ctx.stroke();
         ctx.globalAlpha = 1;
       }
