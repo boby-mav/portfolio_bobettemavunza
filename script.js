@@ -7,6 +7,8 @@ const statEls = document.querySelectorAll("[data-count]");
 const filters = document.querySelectorAll(".filter");
 const projects = document.querySelectorAll(".project");
 const magneticEls = document.querySelectorAll(".magnetic");
+const quickOutput = document.querySelector("#quick-output");
+const quickCommands = document.querySelectorAll("[data-command]");
 
 let width = 0;
 let height = 0;
@@ -18,6 +20,12 @@ const phrases = [
   "designing with Figma...",
   "building APIs with PostgreSQL..."
 ];
+
+const commandReplies = {
+  stack: "Stack: HTML5, CSS3, JavaScript, Figma, Node.js, AdonisJS, API REST, SQL et PostgreSQL.",
+  projet: "Projet phare: X clone Adonis avec authentification, publication, timeline, likes et PostgreSQL.",
+  valeur: "Valeur ajoutee: autonomie, organisation, creativite et envie d'apprendre vite en equipe."
+};
 
 function setTheme(theme) {
   activeTheme = theme;
@@ -149,6 +157,13 @@ filters.forEach((button) => {
       const shouldShow = filter === "all" || project.dataset.kind === filter;
       project.classList.toggle("is-hidden", !shouldShow);
     });
+  });
+});
+
+quickCommands.forEach((button) => {
+  button.addEventListener("click", () => {
+    quickCommands.forEach((item) => item.classList.toggle("active", item === button));
+    quickOutput.textContent = commandReplies[button.dataset.command];
   });
 });
 
