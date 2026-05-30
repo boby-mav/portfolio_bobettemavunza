@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bobette MAVUNZA | Developpeuse Web Junior</title>
+    <meta
+      name="description"
+      content="Portfolio de Bobette MAVUNZA, developpeuse web junior a Kinshasa: web design, front-end, back-end, PostgreSQL et AdonisJS."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#accueil" aria-label="Retour a l'accueil">
+        <span class="brand-mark">BM</span>
+        <span class="brand-name">Bobette MAVUNZA</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#projets">Projets</a>
+        <a href="#stack">Stack</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Changer le theme" title="Changer le theme">
+        <span aria-hidden="true">T</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero section" id="accueil">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Developpeuse Web Junior</p>
+          <h1>Je cree des interfaces web modernes et des applications bien structurees.</h1>
+          <p class="hero-text">
+            Diplomee en developpement web et mobile, je combine web design, front-end,
+            back-end et bases de donnees pour contribuer a des projets web performants.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary magnetic" href="#projets">Voir mes projets</a>
+            <a class="btn secondary magnetic" href="#contact">Me contacter</a>
+            <a class="btn secondary magnetic" href="assets/CV_Bobette_Mavunza.pdf" download>Telecharger mon CV</a>
+          </div>
+          <div class="hero-stats" aria-label="Indicateurs">
+            <div>
+              <strong data-count="1">0</strong>
+              <span>projet web complet</span>
+            </div>
+            <div>
+              <strong data-count="10">0</strong>
+              <span>competences web</span>
+            </div>
+            <div>
+              <strong data-count="3">0</strong>
+              <span>diplomes et formations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-card">
+            <div class="profile-image-wrap">
+              <img src="assets/photo-bobette.jpg" alt="Portrait professionnel de Bobette MAVUNZA">
+            </div>
+            <div class="profile-info">
+              <span class="status-dot"></span>
+              <div>
+                <strong>Bobette MAVUNZA</strong>
+                <span>Kinshasa / Teletravail ou presentiel</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="code-window compact" aria-label="Apercu anime de code">
+            <div class="window-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code><span class="code-muted">const</span> profil = {
+  nom: <span class="code-string">"Bobette MAVUNZA"</span>,
+  role: <span class="code-string">"Developpeuse Web Junior"</span>,
+  focus: [<span class="code-string">"UI/UX"</span>, <span class="code-string">"AdonisJS"</span>, <span class="code-string">"PostgreSQL"</span>],
+  mission() {
+    return <span class="code-string">"Creer des projets web utiles et performants."</span>;
+  }
+}</code></pre>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span id="typing-text"></span>
+              <span class="caret"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split" id="apropos">
+        <div class="section-heading reveal">
+          <p class="eyebrow">A propos</p>
+          <h2>Un profil junior motive par l'innovation numerique.</h2>
+        </div>
+        <div class="about-grid reveal">
+          <p>
+            Basee a Kinshasa, je suis diplomee en developpement web et mobile.
+            J'apporte de l'organisation, de l'autonomie et une bonne capacite
+            d'adaptation pour participer efficacement a la realisation de produits web.
+          </p>
+          <div class="principles">
+            <span>Performance</span>
+            <span>Accessibilite</span>
+            <span>Figma</span>
+            <span>API REST</span>
+            <span>PostgreSQL</span>
+            <span>AdonisJS</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projets">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selection</p>
+          <h2>Realisation et axes techniques</h2>
+        </div>
+
+        <div class="project-toolbar reveal" role="tablist" aria-label="Filtrer les projets">
+          <button class="filter active" type="button" data-filter="all">Tous</button>
+          <button class="filter" type="button" data-filter="frontend">Frontend</button>
+          <button class="filter" type="button" data-filter="backend">Backend</button>
+          <button class="filter" type="button" data-filter="fullstack">Full stack</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project reveal" data-kind="fullstack">
+            <div class="project-media project-screenshot">
+              <img src="assets/projet-x-clone.png" alt="Capture du projet X clone Adonis">
+              <span>Projet reel</span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Full stack</p>
+              <h3>Projet X clone Adonis</h3>
+              <p>Clone inspire de X avec interface sombre, navigation, tendances, publication, authentification, timeline, likes et base PostgreSQL.</p>
+              <div class="tags">
+                <span>AdonisJS</span><span>Node.js</span><span>PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-kind="frontend">
+            <div class="project-media project-screenshot">
+              <img src="assets/projet-sunnyside.png" alt="Capture du projet SunnySide Agency">
+              <span>Landing page</span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Frontend</p>
+              <h3>SunnySide Agency</h3>
+              <p>Landing page creative avec navigation, hero visuel, sections de services et integration responsive.</p>
+              <div class="tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-kind="frontend">
+            <div class="project-media project-screenshot">
+              <img src="assets/projet-figma-netflix.png" alt="Capture du projet Figma inspire de Netflix">
+              <span>Maquette UI</span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Web design</p>
+              <h3>Maquette Netflix</h3>
+              <p>Interface inspiree de Netflix avec hero visuel, formulaire d'inscription, choix de langue et appel a l'action.</p>
+              <div class="tags">
+                <span>Figma</span><span>UI Design</span><span>Prototype</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-kind="frontend">
+            <div class="project-media project-screenshot">
+              <img src="assets/projet-dr-norman.png" alt="Capture du projet hommage Dr. Norman Borlaug">
+              <span>Page hommage</span>
+            </div>
+            <div class="project-body">
+              <p class="project-type">Frontend</p>
+              <h3>Dr. Norman Borlaug</h3>
+              <p>Page hommage structuree avec image principale, texte descriptif et chronologie de vie.</p>
+              <div class="tags">
+                <span>HTML5</span><span>CSS3</span><span>Responsive</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stack-section" id="stack">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Stack</p>
+          <h2>Les outils que j'utilise pour construire proprement.</h2>
+        </div>
+        <div class="stack-marquee reveal" aria-label="Technologies">
+          <div class="stack-track">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Figma</span>
+            <span>Node.js</span><span>AdonisJS</span><span>SQL</span><span>PostgreSQL</span>
+            <span>Flexbox</span><span>CSS Grid</span><span>API REST</span><span>MVC</span>
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Figma</span>
+            <span>Node.js</span><span>AdonisJS</span><span>SQL</span><span>PostgreSQL</span>
+            <span>Flexbox</span><span>CSS Grid</span><span>API REST</span><span>MVC</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline-section" id="experience">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Parcours</p>
+          <h2>Experience et formation.</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span>2026</span>
+            <h3>Developpement web et mobile - Kadea Academy</h3>
+            <p>Formation Bac+2 Simplon a Kinshasa: front-end, back-end, UI/UX, bases de donnees et projets web.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span>2023-2025</span>
+            <h3>Secretaire de direction - Benisach SARL</h3>
+            <p>Gestion administrative et financiere, tenue des documents, caisse, classement et suivi logistique.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span>2014</span>
+            <h3>Graduat en Comptabilite de Gestion</h3>
+            <p>Formation a l'Institut Superieur de Commerce de Matadi, avec une base solide en organisation et gestion.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Tu veux collaborer avec moi ?</h2>
+          <p>
+            Je suis disponible a Kinshasa, en teletravail ou en presentiel, pour contribuer a des projets web.
+          </p>
+          <div class="contact-actions">
+            <a class="btn primary magnetic" href="mailto:bobettemavunza4@gmail.com">Envoyer un email</a>
+            <a class="btn secondary magnetic" href="tel:+243812337169">Appeler</a>
+            <a class="btn secondary magnetic" href="assets/CV_Bobette_Mavunza.pdf" download>CV PDF</a>
+          </div>
+          <ul class="contact-list" aria-label="Coordonnees">
+            <li>Email: bobettemavunza4@gmail.com</li>
+            <li>Telephone: +243 812 337 169</li>
+            <li>Localisation: Kinshasa / Ngaliema</li>
+            <li>GitHub: @Boby-mav</li>
+            <li>LinkedIn: @bobette mavunza</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>(c) 2026 Bobette MAVUNZA</span>
+      <a href="#accueil">Retour en haut</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
