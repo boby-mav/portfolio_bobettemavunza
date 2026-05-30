@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --bg: #eef8f6;
+  --bg: #faf7f0;
   --surface: rgba(255, 255, 255, 0.8);
   --surface-strong: #ffffff;
-  --text: #102026;
-  --muted: #5d6d74;
-  --line: rgba(16, 32, 38, 0.12);
-  --accent: #00a878;
-  --accent-2: #2878ff;
-  --accent-3: #ff7a59;
+  --text: #17201d;
+  --muted: #66716d;
+  --line: rgba(23, 32, 29, 0.12);
+  --accent: #16866b;
+  --accent-2: #315d8a;
+  --accent-3: #d9825b;
   --ink: #ffffff;
   --shadow: 0 22px 70px rgba(27, 73, 86, 0.14);
 }
@@ -40,11 +40,11 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 18% 10%, rgba(0, 168, 120, 0.16), transparent 24rem),
-    radial-gradient(circle at 88% 6%, rgba(40, 120, 255, 0.12), transparent 24rem),
-    linear-gradient(rgba(16, 32, 38, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 32, 38, 0.035) 1px, transparent 1px),
-    linear-gradient(135deg, #f8fffd 0%, #eef8f6 42%, #edf5ff 100%),
+    radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.9), transparent 22rem),
+    radial-gradient(circle at 92% 10%, rgba(22, 134, 107, 0.08), transparent 20rem),
+    linear-gradient(rgba(23, 32, 29, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 32, 29, 0.025) 1px, transparent 1px),
+    linear-gradient(135deg, #fffdf8 0%, #faf7f0 52%, #f3efe7 100%),
     var(--bg);
   background-size: auto, auto, 42px 42px, 42px 42px, auto, auto;
   color: var(--text);
@@ -149,7 +149,7 @@ a {
 }
 
 .nav a:hover {
-  background: rgba(0, 168, 120, 0.13);
+  background: rgba(22, 134, 107, 0.12);
   color: var(--text);
 }
 
@@ -255,7 +255,7 @@ body.light .quick-terminal {
 }
 
 .terminal-status {
-  border: 1px solid rgba(0, 168, 120, 0.32);
+  border: 1px solid rgba(22, 134, 107, 0.32);
   border-radius: 999px;
   padding: 0.22rem 0.48rem;
   color: var(--accent);
@@ -324,7 +324,7 @@ body.light .quick-terminal {
 }
 
 .btn:hover {
-  border-color: rgba(0, 168, 120, 0.55);
+  border-color: rgba(22, 134, 107, 0.5);
 }
 
 .hero-stats {
@@ -408,7 +408,7 @@ body.light .quick-terminal {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 0.85rem;
-  background: rgba(0, 168, 120, 0.08);
+  background: rgba(22, 134, 107, 0.08);
 }
 
 .profile-info strong,
@@ -431,7 +431,7 @@ body.light .quick-terminal {
   height: 0.78rem;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(0, 168, 120, 0.14);
+  box-shadow: 0 0 0 6px rgba(22, 134, 107, 0.14);
   flex: 0 0 auto;
 }
 
@@ -672,7 +672,7 @@ body.light pre {
   right: 10%;
   bottom: 18%;
   border-radius: 999px;
-  background: rgba(0, 168, 120, 0.34);
+  background: rgba(22, 134, 107, 0.34);
 }
 
 .media-studio {
@@ -700,7 +700,7 @@ body.light pre {
 
 .media-api {
   background:
-    linear-gradient(145deg, rgba(0, 168, 120, 0.28), transparent 58%),
+    linear-gradient(145deg, rgba(22, 134, 107, 0.28), transparent 58%),
     #231925;
 }
 
@@ -932,10 +932,10 @@ body.light pre {
 @media (max-width: 560px) {
   body {
     background:
-      radial-gradient(circle at 24% 0%, rgba(0, 168, 120, 0.14), transparent 17rem),
-      linear-gradient(rgba(16, 32, 38, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(16, 32, 38, 0.03) 1px, transparent 1px),
-      linear-gradient(135deg, #f8fffd 0%, #eef8f6 48%, #edf5ff 100%),
+      radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.9), transparent 17rem),
+      linear-gradient(rgba(23, 32, 29, 0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 32, 29, 0.022) 1px, transparent 1px),
+      linear-gradient(135deg, #fffdf8 0%, #faf7f0 54%, #f3efe7 100%),
       var(--bg);
     background-size: auto, 34px 34px, 34px 34px, auto, auto;
   }

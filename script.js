@@ -54,8 +54,8 @@ function resizeCanvas() {
 function drawAmbient() {
   ctx.clearRect(0, 0, width, height);
   const darkMode = document.body.classList.contains("light");
-  const dot = darkMode ? "rgba(255, 255, 255, 0.34)" : "rgba(0, 92, 82, 0.3)";
-  const line = darkMode ? "rgba(51, 224, 166, 0.24)" : "rgba(0, 168, 120, 0.26)";
+  const dot = darkMode ? "rgba(255, 255, 255, 0.34)" : "rgba(22, 86, 72, 0.22)";
+  const line = darkMode ? "rgba(51, 224, 166, 0.24)" : "rgba(22, 134, 107, 0.18)";
 
   particles.forEach((p, index) => {
     p.x += p.vx;
