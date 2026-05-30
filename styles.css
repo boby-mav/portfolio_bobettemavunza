@@ -790,21 +790,31 @@ body.light pre {
   .site-header {
     align-items: stretch;
     flex-wrap: wrap;
+    gap: 0.65rem;
+    width: min(100% - 1rem, 1120px);
+    padding: 0.65rem 0;
   }
 
   .brand {
     order: 1;
+    max-width: calc(100% - 56px);
   }
 
   .theme-toggle {
     order: 2;
+    flex: 0 0 auto;
   }
 
   .nav {
     order: 3;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
   }
 
   .hero,
@@ -835,17 +845,139 @@ body.light pre {
 }
 
 @media (max-width: 560px) {
+  body {
+    background:
+      radial-gradient(circle at 30% 2%, rgba(46, 230, 166, 0.14), transparent 18rem),
+      var(--bg);
+  }
+
   .section {
-    width: min(100% - 1rem, 1120px);
-    padding: 4rem 0;
+    width: min(100% - 1.25rem, 1120px);
+    padding: 3.4rem 0;
+  }
+
+  .brand {
+    min-width: 0;
+    padding-right: 0.7rem;
+  }
+
+  .brand-name {
+    overflow: hidden;
+    max-width: 210px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .hero {
+    gap: 2rem;
+    padding-top: 2.2rem;
+  }
+
+  h1 {
+    font-size: clamp(2.35rem, 13vw, 3.35rem);
+    line-height: 1.02;
+  }
+
+  h2 {
+    font-size: clamp(1.85rem, 10vw, 2.6rem);
+    line-height: 1.05;
+  }
+
+  .hero-text,
+  .about-grid p {
+    font-size: 1rem;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 50px;
+    padding-inline: 0.8rem;
+    text-align: center;
   }
 
   .hero-stats {
     grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-stats div {
+    min-height: 78px;
+  }
+
+  .profile-card {
+    padding: 0.65rem;
+  }
+
+  .profile-image-wrap {
+    aspect-ratio: 1 / 1.08;
+  }
+
+  .profile-image-wrap img {
+    object-position: 53% 36%;
+  }
+
+  .profile-info {
+    align-items: flex-start;
+    padding: 0.75rem;
+  }
+
+  .code-window {
+    display: none;
+  }
+
+  .principles span,
+  .tags span {
+    font-size: 0.82rem;
+  }
+
+  .project-toolbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filter {
+    width: 100%;
+    padding-inline: 0.55rem;
+  }
+
+  .project-body {
+    padding: 1rem;
+  }
+
+  .project-screenshot,
+  .project-screenshot img {
+    height: 190px;
+    min-height: 190px;
+  }
+
+  .stack-marquee {
+    padding: 0.8rem 0;
+  }
+
+  .timeline-item {
+    padding: 1rem;
+  }
+
+  .contact-panel {
+    padding: 1.1rem;
+  }
+
+  .contact-list li {
+    overflow-wrap: anywhere;
   }
 
   .nav a {
-    padding-inline: 0.65rem;
+    flex: 0 0 auto;
+    padding-inline: 0.7rem;
     font-size: 0.86rem;
   }
 
@@ -859,6 +991,22 @@ body.light pre {
 
   .site-footer {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    max-width: 165px;
+  }
+
+  .project-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .project-screenshot,
+  .project-screenshot img {
+    height: 168px;
+    min-height: 168px;
   }
 }
 
