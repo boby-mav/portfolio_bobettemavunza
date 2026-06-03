@@ -1,16 +1,16 @@
 :root {
   color-scheme: light;
-  --bg: #faf7f0;
-  --surface: rgba(255, 255, 255, 0.8);
+  --bg: #a7eab6;
+  --surface: rgba(255, 255, 255, 0.86);
   --surface-strong: #ffffff;
-  --text: #17201d;
-  --muted: #66716d;
-  --line: rgba(23, 32, 29, 0.12);
-  --accent: #16866b;
-  --accent-2: #315d8a;
-  --accent-3: #d9825b;
-  --ink: #ffffff;
-  --shadow: 0 22px 70px rgba(27, 73, 86, 0.14);
+  --text: #171717;
+  --muted: #4f5b55;
+  --line: rgba(23, 23, 23, 0.22);
+  --accent: #ff9033;
+  --accent-2: #ffcc00;
+  --accent-3: #ffc7bb;
+  --ink: #171717;
+  --shadow: 8px 8px 0 rgba(23, 23, 23, 0.95);
 }
 
 body.light {
@@ -40,11 +40,11 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.9), transparent 22rem),
-    radial-gradient(circle at 92% 10%, rgba(22, 134, 107, 0.08), transparent 20rem),
-    linear-gradient(rgba(23, 32, 29, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23, 32, 29, 0.025) 1px, transparent 1px),
-    linear-gradient(135deg, #fffdf8 0%, #faf7f0 52%, #f3efe7 100%),
+    radial-gradient(circle at 16% 12%, rgba(255, 199, 187, 0.8), transparent 20rem),
+    radial-gradient(circle at 88% 6%, rgba(255, 204, 0, 0.36), transparent 18rem),
+    linear-gradient(rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+    linear-gradient(135deg, #a7eab6 0%, #fef1e4 52%, #ffc7bb 100%),
     var(--bg);
   background-size: auto, auto, 42px 42px, 42px 42px, auto, auto;
   color: var(--text);
@@ -100,9 +100,9 @@ a {
 .brand,
 .nav,
 .theme-toggle {
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   background: var(--surface);
-  box-shadow: 0 12px 30px rgba(27, 73, 86, 0.09);
+  box-shadow: 4px 4px 0 rgba(23, 23, 23, 0.95);
 }
 
 .brand {
@@ -121,7 +121,7 @@ a {
   height: 34px;
   border-radius: 50%;
   background: var(--accent);
-  color: var(--ink);
+  color: var(--text);
   font-size: 0.78rem;
   font-weight: 900;
 }
@@ -149,7 +149,7 @@ a {
 }
 
 .nav a:hover {
-  background: rgba(22, 134, 107, 0.12);
+  background: var(--accent-2);
   color: var(--text);
 }
 
@@ -234,10 +234,10 @@ h3 {
 .quick-terminal {
   max-width: 650px;
   margin-top: 1.2rem;
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   border-radius: 8px;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.66);
+  background: rgba(255, 255, 255, 0.74);
   box-shadow: var(--shadow);
 }
 
@@ -255,10 +255,11 @@ body.light .quick-terminal {
 }
 
 .terminal-status {
-  border: 1px solid rgba(22, 134, 107, 0.32);
+  border: 2px solid var(--text);
   border-radius: 999px;
   padding: 0.22rem 0.48rem;
-  color: var(--accent);
+  background: var(--accent-2);
+  color: var(--text);
   font-size: 0.72rem;
   font-weight: 850;
 }
@@ -279,7 +280,7 @@ body.light .quick-terminal {
 
 .quick-commands button {
   min-height: 36px;
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   border-radius: 999px;
   padding: 0.42rem 0.7rem;
   background: var(--surface);
@@ -293,9 +294,8 @@ body.light .quick-terminal {
 
 .quick-commands button:hover,
 .quick-commands button.active {
-  border-color: transparent;
   background: var(--accent);
-  color: var(--ink);
+  color: var(--text);
 }
 
 .btn {
@@ -304,7 +304,7 @@ body.light .quick-terminal {
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   border-radius: 999px;
   padding: 0.78rem 1.05rem;
   font-weight: 850;
@@ -313,9 +313,8 @@ body.light .quick-terminal {
 }
 
 .btn.primary {
-  border-color: transparent;
   background: var(--accent);
-  color: var(--ink);
+  color: var(--text);
 }
 
 .btn.secondary {
@@ -324,7 +323,8 @@ body.light .quick-terminal {
 }
 
 .btn:hover {
-  border-color: rgba(22, 134, 107, 0.5);
+  box-shadow: 4px 4px 0 rgba(23, 23, 23, 0.95);
+  transform: translateY(-2px);
 }
 
 .hero-stats {
@@ -341,7 +341,7 @@ body.light .quick-terminal {
 .contact-panel,
 .code-window,
 .profile-card {
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   background: var(--surface);
   box-shadow: var(--shadow);
 }
@@ -374,7 +374,7 @@ body.light .quick-terminal {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  padding: 0.85rem;
+  padding: 1rem;
   transform: rotateX(4deg) rotateY(-8deg);
   transition: transform 300ms ease;
 }
@@ -386,9 +386,12 @@ body.light .quick-terminal {
 .profile-image-wrap {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  aspect-ratio: 4 / 5;
+  border: 3px solid var(--text);
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
   background: var(--surface-strong);
+  box-shadow: 10px 10px 0 var(--accent-2);
+  margin: 0.45rem;
 }
 
 .profile-image-wrap img {
@@ -396,7 +399,7 @@ body.light .quick-terminal {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 54% 43%;
+  object-position: 53% 36%;
   filter: saturate(1.05) contrast(1.03);
 }
 
@@ -405,10 +408,10 @@ body.light .quick-terminal {
   align-items: center;
   gap: 0.8rem;
   margin-top: 0.85rem;
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   border-radius: 8px;
   padding: 0.85rem;
-  background: rgba(22, 134, 107, 0.08);
+  background: #fef1e4;
 }
 
 .profile-info strong,
@@ -431,7 +434,7 @@ body.light .quick-terminal {
   height: 0.78rem;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(22, 134, 107, 0.14);
+  box-shadow: 0 0 0 6px rgba(255, 144, 51, 0.18);
   flex: 0 0 auto;
 }
 
@@ -456,7 +459,7 @@ body.light .quick-terminal {
   display: flex;
   gap: 0.45rem;
   padding: 0.9rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid var(--text);
 }
 
 .window-bar span {
@@ -503,7 +506,7 @@ body.light pre {
   align-items: center;
   min-height: 54px;
   gap: 0.55rem;
-  border-top: 1px solid var(--line);
+  border-top: 2px solid var(--text);
   padding: 0 1.2rem;
   color: var(--muted);
   white-space: nowrap;
@@ -543,7 +546,7 @@ body.light pre {
 .principles span,
 .tags span,
 .stack-track span {
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   background: var(--surface);
   border-radius: 999px;
   color: var(--text);
@@ -567,7 +570,7 @@ body.light pre {
 
 .filter {
   min-height: 42px;
-  border: 1px solid var(--line);
+  border: 2px solid var(--text);
   border-radius: 999px;
   padding: 0.55rem 0.9rem;
   background: var(--surface);
@@ -578,9 +581,8 @@ body.light pre {
 }
 
 .filter.active {
-  border-color: transparent;
   background: var(--accent);
-  color: var(--ink);
+  color: var(--text);
 }
 
 .projects-grid {
@@ -633,11 +635,11 @@ body.light pre {
   position: absolute;
   left: 0.9rem;
   bottom: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 2px solid var(--text);
   border-radius: 999px;
   padding: 0.38rem 0.65rem;
-  background: rgba(16, 32, 38, 0.76);
-  color: #ffffff;
+  background: var(--accent-2);
+  color: var(--text);
   font-size: 0.76rem;
   font-weight: 850;
   backdrop-filter: blur(12px);
@@ -822,7 +824,7 @@ body.light pre {
 }
 
 .contact-list li {
-  border-left: 3px solid var(--accent);
+  border-left: 4px solid var(--accent);
   padding-left: 0.8rem;
 }
 
@@ -932,10 +934,10 @@ body.light pre {
 @media (max-width: 560px) {
   body {
     background:
-      radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.9), transparent 17rem),
-      linear-gradient(rgba(23, 32, 29, 0.022) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(23, 32, 29, 0.022) 1px, transparent 1px),
-      linear-gradient(135deg, #fffdf8 0%, #faf7f0 54%, #f3efe7 100%),
+      radial-gradient(circle at 24% 0%, rgba(255, 199, 187, 0.72), transparent 16rem),
+      linear-gradient(rgba(23, 23, 23, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 23, 23, 0.03) 1px, transparent 1px),
+      linear-gradient(135deg, #a7eab6 0%, #fef1e4 56%, #ffc7bb 100%),
       var(--bg);
     background-size: auto, 34px 34px, 34px 34px, auto, auto;
   }
@@ -1029,10 +1031,12 @@ body.light pre {
 
   .profile-card {
     padding: 0.65rem;
+    box-shadow: 5px 5px 0 rgba(23, 23, 23, 0.95);
   }
 
   .profile-image-wrap {
-    aspect-ratio: 1 / 1.08;
+    aspect-ratio: 1 / 1;
+    box-shadow: 6px 6px 0 var(--accent-2);
   }
 
   .profile-image-wrap img {
@@ -1071,6 +1075,15 @@ body.light pre {
   .project-screenshot img {
     height: 190px;
     min-height: 190px;
+  }
+
+  .hero-stats div,
+  .project,
+  .timeline-item,
+  .contact-panel,
+  .code-window,
+  .quick-terminal {
+    box-shadow: 5px 5px 0 rgba(23, 23, 23, 0.95);
   }
 
   .stack-marquee {
@@ -1121,6 +1134,10 @@ body.light pre {
   .project-screenshot img {
     height: 168px;
     min-height: 168px;
+  }
+
+  .profile-image-wrap {
+    box-shadow: 5px 5px 0 var(--accent-2);
   }
 }
 
