@@ -170,12 +170,27 @@ a {
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
   align-items: center;
   gap: 3rem;
   min-height: calc(100vh - 76px);
   padding-top: 3rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 6rem -2rem auto auto;
+  width: min(28vw, 320px);
+  aspect-ratio: 1;
+  border: 2px solid var(--text);
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 8px 8px 0 rgba(23, 23, 23, 0.95);
+  opacity: 0.32;
+  z-index: -1;
 }
 
 .eyebrow {
@@ -200,6 +215,22 @@ h1 {
   font-size: clamp(2.5rem, 8vw, 6.4rem);
   line-height: 0.95;
   letter-spacing: 0;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 3px solid var(--text);
+  border-radius: 999px;
+  padding: 0.06em 0.22em 0.1em;
+  background: var(--accent-2);
+  box-shadow: 5px 5px 0 rgba(23, 23, 23, 0.95);
+  color: var(--text);
+  font-size: 0.5em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: rotate(-4deg) translateY(-0.08em);
+  vertical-align: middle;
 }
 
 h2 {
@@ -379,6 +410,16 @@ body.light .quick-terminal {
   transition: transform 300ms ease;
 }
 
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 144, 51, 0.18), transparent 45%),
+    linear-gradient(315deg, rgba(255, 204, 0, 0.2), transparent 42%);
+  pointer-events: none;
+}
+
 .profile-card:hover {
   transform: rotateX(0deg) rotateY(0deg) translateY(-6px);
 }
@@ -392,6 +433,7 @@ body.light .quick-terminal {
   background: var(--surface-strong);
   box-shadow: 10px 10px 0 var(--accent-2);
   margin: 0.45rem;
+  z-index: 1;
 }
 
 .profile-image-wrap img {
@@ -404,6 +446,7 @@ body.light .quick-terminal {
 }
 
 .profile-info {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -412,6 +455,7 @@ body.light .quick-terminal {
   border-radius: 8px;
   padding: 0.85rem;
   background: #fef1e4;
+  z-index: 1;
 }
 
 .profile-info strong,
@@ -561,6 +605,18 @@ body.light pre {
   margin-bottom: 2rem;
 }
 
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 10px;
+  margin-top: 0.85rem;
+  border: 2px solid var(--text);
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 4px 4px 0 rgba(23, 23, 23, 0.95);
+}
+
 .project-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -594,11 +650,12 @@ body.light pre {
 .project {
   overflow: hidden;
   border-radius: 8px;
-  transition: transform 200ms ease, opacity 220ms ease;
+  transition: transform 200ms ease, opacity 220ms ease, box-shadow 200ms ease;
 }
 
 .project:hover {
   transform: translateY(-8px);
+  box-shadow: 12px 12px 0 rgba(23, 23, 23, 0.95);
 }
 
 .project.is-hidden {
@@ -914,6 +971,12 @@ body.light pre {
     padding-top: 4rem;
   }
 
+  .hero::before {
+    inset: 8rem 1rem auto auto;
+    width: 190px;
+    opacity: 0.22;
+  }
+
   .code-window {
     transform: none;
   }
@@ -977,6 +1040,11 @@ body.light pre {
   h1 {
     font-size: clamp(2.35rem, 13vw, 3.35rem);
     line-height: 1.02;
+  }
+
+  .hero-pill {
+    border-width: 2px;
+    box-shadow: 3px 3px 0 rgba(23, 23, 23, 0.95);
   }
 
   h2 {
@@ -1073,8 +1141,8 @@ body.light pre {
 
   .project-screenshot,
   .project-screenshot img {
-    height: 190px;
-    min-height: 190px;
+    height: 205px;
+    min-height: 205px;
   }
 
   .hero-stats div,
@@ -1132,8 +1200,8 @@ body.light pre {
 
   .project-screenshot,
   .project-screenshot img {
-    height: 168px;
-    min-height: 168px;
+    height: 180px;
+    min-height: 180px;
   }
 
   .profile-image-wrap {
